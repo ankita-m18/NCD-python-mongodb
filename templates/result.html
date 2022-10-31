@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+
+<body>
+
+    <form action="/back" method='POST'>
+        <table align="center" border="1" height="" width="">
+            <tr>
+                <th colspan="2" style="background-color:rgb(52, 173, 52)">NCD Risk Assessment Checklist Score</th>
+            </tr>
+
+            <tr style="background-color:skyblue">
+                <th>Question</th>
+                <th>Score</th>
+            </tr>
+
+
+            <tr>
+                <td>1. What is your age? (in complet years)</td>
+                <td style="text-align:center">{{ age }}</td>
+            </tr>
+
+            <tr>
+                <td>2. Do you smoke or Consume smokeless product like Gutka or Khaini?</td>
+                <td style="text-align:center">{{ smoke }}</td>
+            </tr>
+
+            <tr>
+                <td>3. Do you consume alcohol daily?</td>
+                <td style="text-align:center">{{ alcohol }}</td>
+            </tr>
+
+            <tr>
+                <td>4. Measurement of waist in (cm)</td>
+                <td style="text-align:center">{{ waist }}</td>
+            </tr>
+
+            <tr>
+                <td>5. Do you undertake any physical activities for a minimum of 150 minutes a week?</td>
+                <td style="text-align:center">{{ phy_act }}</td>
+            </tr>
+
+            <tr>
+                <td>6. Do you have a family history (any one of your parents or siblings) of high blood pressure,
+                    diabetes and heart disease?</td>
+                <td style="text-align:center">{{ fam_his }}</td>
+            </tr>
+
+            <tr style="text-align:center">
+                <th rowspan="2" style="background-color:lightpink" align="left">Total Score: </th>
+                <td>{{ total }}</td>
+            </tr>
+
+        </table>
+        <h2>{{result}}</h2>
+        <button type="back" class="btn btn-primary">back</button>
+    </form>
+</body>
+
+</html>
